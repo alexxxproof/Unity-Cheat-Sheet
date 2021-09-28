@@ -23,7 +23,7 @@ public class Shoot : MonoBehaviour
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
                 //Получаем объект, в который попал луч и проверяем наличие у него компонента EnemyController
-                var target = hit.transform.gameObject.GetComponent<EnemyController>();
+                var target = hit.transform.gameObject.GetComponent<EnemyDamage>();
                 if (target != null) target.Damage();
                 else
                 {
