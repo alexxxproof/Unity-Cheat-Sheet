@@ -20,7 +20,7 @@ public class Move : MonoBehaviour
 
     void Update()
     {
-        //"Horizontal" и "Vertical" — это дополнительные имена для сопоставления с клавиатурой.
+        //"Horizontal" и "Vertical" — это дополнительные имена для сопоставления с клавиатурой
         float deltaX = Input.GetAxis("Horizontal") * speed;
         float deltaZ = Input.GetAxis("Vertical") * speed;
 
