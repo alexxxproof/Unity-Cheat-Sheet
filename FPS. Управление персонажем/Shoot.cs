@@ -22,8 +22,14 @@ public class Shoot : MonoBehaviour
             //Проверяет место пересечения луча, собирает информацию об этом пересечении и возвращает true в случае столкновения луча с препятствием.
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                //Запуск сопрограммы в ответ на попадание.
-                StartCoroutine(SphereIndicator(hit.point));
+                //Получаем объект, в который попал луч и проверяем наличие у него компонента EnemyController
+                var target = hit.transform.gameObject.GetComponent<EnemyController>();
+                if (target != null) target.Damage();
+                else
+                {
+                    //Запуск сопрограммы в ответ на попадание.
+                    StartCoroutine(SphereIndicator(hit.point));
+                }
             }
         }
     }
