@@ -32,6 +32,6 @@ public class Move : MonoBehaviour
         m.SetTextureOffset("_MainTex", new Vector2(1, 1));  //offset
         m.EnableKeyword("_EMISSION");                       //свечение
         m.SetColor("_EmissionColor", Color.blue);           //цвет свечения
-        m.SetOverrideTag("RenderType", "Transparent");      //Rendering Mode
+        m.SetOverrideTag("RenderType", "Transparent");      //Rendering Mode 
     }
 }
