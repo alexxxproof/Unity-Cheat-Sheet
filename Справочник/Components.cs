@@ -18,6 +18,6 @@ public class Move : MonoBehaviour
         var rb = GetComponent<Rigidbody>();
         var rbd = rb.drag;          //сопротивление воздуха при движении
         var rbad = rb.angularDrag;  //сопротивление воздуха при вращении
-        var rbk = rb.isKinematic;   //не действуют столкновения
+        var rbk = rb.isKinematic;   //не действуют столкновения 
     }
 }
